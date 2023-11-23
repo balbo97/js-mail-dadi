@@ -19,6 +19,17 @@ Consigli del giorno:
 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
 
+MAIL
+1- richiedere la mail all'utente 
+2- creare un array contentente alcune mail 
+3- controllare se quella inserita dall'utente è tra quelle
+4- stampare un messaggio sull'esito del controllo 
+
+GIOCO DEI DADI 
+1- creare un numero random da 1 a 6 per il giocatore 
+2- creare un numero random da 1 a 6 per il computer 
+3- stabilire il vincitore in base al numero più alto 
+
 
 
 
