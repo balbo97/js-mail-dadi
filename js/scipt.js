@@ -9,42 +9,54 @@ button_send.addEventListener('click', function(){
     let array = ['ciccio@gmail.com','pippo@gmail.com','enzuccio@gmail.com']
 
     // VERIFICARE SE LA MAIL INSERITA DALL'UTENTE E' PRESENTE NELL'ARRAY
-    let right_email = false;
+    let flag = false;
+
     for (let i=0; i<array.length; i++){
-        if (email == array[i]){
-            
+
+        if (email == array[i]){  
             // E' PRESENTE 
-            right_email = true 
-            
-            // LA INSERISCO NEL HTML
-            document.getElementById('welcome').innerHTML = `<span class="text-success"> Complimenti la tua email è corretta! </span>`
+            flag = true 
         }
     }
 
-    //STAMPO IN CONSOLE SE APPARTIENE O MENO ALL' ARRAY
-    console.log(right_email)
+    if (flag == true){
+        
+        //STAMPO IN CONSOLE SE APPARTIENE O MENO ALL' ARRAY
+        console.log(flag)
+        
+        // INSERISCO UN MESSAGGIO NEL HTML 
+        document.getElementById('welcome').innerHTML = `<span class="text-success fs-1"> Complimenti la tua email è corretta! </span>`
+    }
+    else{
+        //STAMPO IN CONSOLE SE APPARTIENE O MENO ALL' ARRAY
+        console.log(flag)
+
+        // INSERISCO UN MESSAGGIO NEL HTML 
+        document.getElementById('welcome').innerHTML = `<span class="text-danger fs-1">La mail è incorretta! </span>`
+    }
     
-   
 })
 
-
-const button_play = document.querySelector('.send');
+const button_play = document.querySelector('.play');
 
 button_play.addEventListener('click', function(){
     
-    const player = Math.ceil(Math.random()*6)
-    const computer = Math.ceil(Math.random()*6)
+    const player = Math.floor(Math.random()*6+1)
+    const computer = Math.floor(Math.random()*6+1)
 
-    let win;
+    
     if (player>computer){
-        win = "player win"
+        console.log('hai vinto')
+        document.getElementById('winner').innerText = 'Hai vinto'
     }
     else if(player<computer){
-        win = 'computer win'
+        console.log('hai perso')
+        document.getElementById('winner').innerText = 'Hai perso'
     }
     else{
-        win = 'pareggio '
+        console.log('pareggio')
+        document.getElementById('winner').innerText = 'Hai pareggiato'
     }
    
-    document.getElementById('winner').innerText = (win) 
+     
 })
